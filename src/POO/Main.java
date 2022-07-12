@@ -4,37 +4,37 @@ public class Main {
     public static void main(String[] args) {
         // Objet = instance
         Avion boeing737Map = new Avion();
-        boeing737Map.fabricant = "boeing";
-        boeing737Map.modele = "737 Max 10";
-        boeing737Map.nombreSieges = 200;
-        boeing737Map.couleur = "white";
+        boeing737Map.setFabricant( "boeing");
+        boeing737Map.setModele("737 Max 10");
+        boeing737Map.setNombreSieges(200);
+        boeing737Map.setCouleur("white");
         System.out.printf("%s\n=======================\n", boeing737Map.nomCompletAvion());
         System.out.printf("Marque: %s\nModèle: %s\nNombre de siège: %d\nCouleur: %s\n",
-                boeing737Map.fabricant,
-                boeing737Map.modele,
-                boeing737Map.nombreSieges,
-                boeing737Map.couleur);
+                boeing737Map.getFabricant(),
+                boeing737Map.getModele(),
+                boeing737Map.getNombreSieges(),
+                boeing737Map.getCouleur());
 
         Avion airbusA320 = new Avion();
-        airbusA320.fabricant = "airbus";
-        airbusA320.modele = "A320";
-        airbusA320.nombreSieges = 150;
-        airbusA320.couleur = "white";
+        airbusA320.setFabricant("airbus");
+        airbusA320.setModele("A320");
+        airbusA320.setNombreSieges(150);
+        airbusA320.setCouleur("white");
         System.out.printf("%s\n=======================\n", airbusA320.nomCompletAvion());
         System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s\n",
-                airbusA320.fabricant,
-                airbusA320.modele,
-                airbusA320.nombreSieges,
-                airbusA320.couleur);
+                airbusA320.getFabricant(),
+                airbusA320.getModele(),
+                airbusA320.getNombreSieges(),
+                airbusA320.getCouleur());
 
         Avion monAvion = new Avion(); // si on ne renseigne pas les données
         // toutes les variables d'origine primitive seront à 0 (pour les int)
         // à null (pour les String)
         System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s",
-                monAvion.fabricant,
-                monAvion.modele,
-                monAvion.nombreSieges,
-                monAvion.couleur);
+                monAvion.getFabricant(),
+                monAvion.getModele(),
+                monAvion.getNombreSieges(),
+                monAvion.getCouleur());
 
     }
 }

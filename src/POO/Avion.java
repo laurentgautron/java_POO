@@ -1,7 +1,7 @@
 package POO;
 
 // constructeur par défaut par défaut : c'est une version minimale du constructeur que la JVM va appeler
-// si aucun constructeur n'est défini
+// si aucun constructeur n'est défini,
 // c'est pourquoi lorsqu'on ne définit aucune valeur pour l'avion, il initialise les attributs
 
 public class Avion {
@@ -11,11 +11,20 @@ public class Avion {
     private int nombreSieges;
     private String couleur;
 
+    // constructeur
     public Avion(String fabricant, String modele, int nombreSieges, String couleur) {
         this.fabricant = fabricant;
         this.modele = modele;
         this.nombreSieges = nombreSieges;
         this.couleur = couleur;
+    }
+
+    // constructeur par défaut
+    public Avion() {
+        fabricant = "";
+        modele = "";
+        nombreSieges = 50;
+        couleur = "withe";
     }
 
     public String getFabricant() {

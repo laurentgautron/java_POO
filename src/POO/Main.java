@@ -23,14 +23,16 @@ public class Main {
                 airbusA320.getNombreSieges(),
                 airbusA320.getCouleur());
 
-        // Avion monAvion = new Avion(); // si on ne renseigne pas les données
+        Avion monAvion = new Avion(); // si on ne renseigne pas les données
         // toutes les variables d'origine primitive seront à 0 (pour les int)
         // à null (pour les String)
-        /*System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s\n",
+        // sauf si constructeur par défaut
+        System.out.printf("%s\n=======================\n", monAvion.nomCompletAvion());
+        System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s\n",
                 monAvion.getFabricant(),
                 monAvion.getModele(),
                 monAvion.getNombreSieges(),
-                monAvion.getCouleur());*/
+                monAvion.getCouleur());
 
         // opérations objet Rectangle
         /*Rectangle rec = new Rectangle();

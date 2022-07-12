@@ -35,6 +35,15 @@ public class Avion {
         this.couleur = avion.couleur;
     }
 
+    // comparaison des objets
+    public boolean equals(Avion avion) {
+        if (avion == null) {
+            return false;
+        }
+        return this.fabricant == avion.fabricant && this.modele == avion.modele && this.nombreSieges == avion.nombreSieges
+                && this.couleur == avion.couleur;
+    }
+
     public String getFabricant() {
         return fabricant;
     }
@@ -74,4 +83,11 @@ public class Avion {
         // return String.format("%s %s, fabricant, modele);
         return fabricant + " " + modele;
     }
+
+    public String toString() {
+        return String.format("Fabricant: %s\nModele: %s\nnombreSièges: %d\nCouleur: %s\n",
+                fabricant, modele, nombreSieges, couleur);
+    }
+
+
 }

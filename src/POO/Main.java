@@ -1,5 +1,9 @@
 package POO;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
         // Objet = instance
@@ -29,14 +33,26 @@ public class Main {
         /*Avion a = boeing737Map;
         a.setModele("XYZABC");*/
 
-        // duplication
+        // duplication et comparaison
         Avion airbusA330 = new Avion(airbusA320);
-        airbusA330.setModele("A330");
+        System.out.println("Compare les références: airbusA330 = airbusA320" + (airbusA330 == airbusA320));
+        System.out.println("Compare les attributs: airbusA330 = airbusA320" + airbusA330.equals(airbusA320));
+        /*airbusA330.setModele("A330");
         System.out.println(airbusA320.getModele());
-        System.out.println(airbusA330.getModele());
+        System.out.println(airbusA330.getModele());*/
 
 
-
+        ArrayList<String> fruits = new ArrayList<>(Arrays.asList("Pomme", "mangue", "banane"));
+        HashMap<String,String> identite = new HashMap<>();
+        identite.put("nom", "Lisangola");
+        identite.put("prenom", "Christian");
+        String[] noms = {"Sarah", "Jean", "Alain"};
+        // la methode toString est appelée implicitement pour afficher les objets
+        System.out.println(fruits);
+        System.out.println(identite);
+        System.out.println(noms);
+        System.out.println(boeing737Map);
+        System.out.println(boeing737Map);
 
 
 

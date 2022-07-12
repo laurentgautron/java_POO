@@ -23,6 +23,24 @@ public class Main {
                 airbusA320.getNombreSieges(),
                 airbusA320.getCouleur());
 
+        // mauvaise méthode pour copier un objet
+        // a et boeing737Map point sur le même objet
+        // a == boeing737Map : on copie la référence
+        /*Avion a = boeing737Map;
+        a.setModele("XYZABC");*/
+
+        // duplication
+        Avion airbusA330 = new Avion(airbusA320);
+        airbusA330.setModele("A330");
+        System.out.println(airbusA320.getModele());
+        System.out.println(airbusA330.getModele());
+
+
+
+
+
+
+
         Avion monAvion = new Avion(); // si on ne renseigne pas les données
         // toutes les variables d'origine primitive seront à 0 (pour les int)
         // à null (pour les String)

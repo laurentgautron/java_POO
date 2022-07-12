@@ -27,6 +27,14 @@ public class Avion {
         couleur = "withe";
     }
 
+    // constructeur de copie
+    public Avion (Avion avion) {
+        this.fabricant = avion.fabricant;
+        this.modele = avion.modele;
+        this.nombreSieges = avion.nombreSieges;
+        this.couleur = avion.couleur;
+    }
+
     public String getFabricant() {
         return fabricant;
     }

@@ -30,11 +30,22 @@ public class Main {
         Avion monAvion = new Avion(); // si on ne renseigne pas les données
         // toutes les variables d'origine primitive seront à 0 (pour les int)
         // à null (pour les String)
-        System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s",
+        System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s\n",
                 monAvion.getFabricant(),
                 monAvion.getModele(),
                 monAvion.getNombreSieges(),
                 monAvion.getCouleur());
 
+        // opérations objet Rectangle
+        Rectangle rec = new Rectangle();
+        rec.setLargeur(200.5);
+        rec.setLongueur(150.3);
+        System.out.println("##############################");
+        System.out.println("######## Rectangle ###########");
+        System.out.println("##############################");
+        System.out.println("Longueur: " + rec.getLongueur());
+        System.out.println("Largeur: " + rec.getLargeur());
+        System.out.println("La surface du rectangle est: " + rec.calculAire());
+        System.out.println("Le périmètre du rectangle est: " + rec.calculPerimetre());
     }
 }

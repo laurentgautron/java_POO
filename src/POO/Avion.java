@@ -24,6 +24,8 @@ public class Avion {
     }
 
     public void setFabricant(String fabricant) {
+        // fabricant = fabricant ; le paramètre empêche de voir l'attribut = masquage
+        // this distingue le paramètre de l'attribut
         this.fabricant = fabricant;
     }
 

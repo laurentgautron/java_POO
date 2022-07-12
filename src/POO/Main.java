@@ -8,6 +8,7 @@ public class Main {
         boeing737Map.modele = "737 Max 10";
         boeing737Map.nombreSieges = 200;
         boeing737Map.couleur = "white";
+        System.out.printf("%s\n=======================\n", boeing737Map.nomCompletAvion());
         System.out.printf("Marque: %s\nModèle: %s\nNombre de siège: %d\nCouleur: %s\n",
                 boeing737Map.fabricant,
                 boeing737Map.modele,
@@ -19,6 +20,7 @@ public class Main {
         airbusA320.modele = "A320";
         airbusA320.nombreSieges = 150;
         airbusA320.couleur = "white";
+        System.out.printf("%s\n=======================\n", airbusA320.nomCompletAvion());
         System.out.printf("Marque: %s\nModèle: %s\nNombre de sièges: %d\nCouleur: %s",
                 airbusA320.fabricant,
                 airbusA320.modele,

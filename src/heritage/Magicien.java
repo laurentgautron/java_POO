@@ -16,9 +16,14 @@ public class Magicien extends Personnage {
         this.baguetteMagique = baguetteMagique;
     }
 
-    @Override
+    /*@Override
     public void rencontrer() {
         System.out.println("Je vais te faire disparaître");
+    }*/
+
+    @Override
+    public void rencontrer() {
+        System.out.println("Je vais te faire disparaitre");
     }
 
     @Override

@@ -22,6 +22,11 @@ public class Guerrier extends Personnage {
         System.out.println("Je vais te tuer");
     }
 
+    /*@Override
+    public void rencontrer() {
+        System.out.println("Je vais te tuer");
+    }*/
+
     @Override
     public String toString() {
         return super.toString() + String.format("Arme: %s", arme);

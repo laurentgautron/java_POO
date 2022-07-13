@@ -20,4 +20,9 @@ public class Magicien extends Personnage {
     public void rencontrer() {
         System.out.println("Je vais te faire disparaître");
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + String.format("Baguette: %s", baguetteMagique);
+    }
 }

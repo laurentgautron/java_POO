@@ -9,5 +9,12 @@ public class Main {
         chris.rencontrer();
         bamos.rencontrer();
         mamadou.rencontrer();
+
+        System.out.println();
+        System.out.println(chris);
+        System.out.println();
+        System.out.println(bamos);
+        System.out.println();
+        System.out.println(mamadou);
     }
 }

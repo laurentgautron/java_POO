@@ -43,10 +43,9 @@ public class Souris {
     }
 
     public String toString() {
-        String pluriel = age > 1 ? "s" : "";
         String clone = isClonee() ? ", clonée," : "";
-        return String.format("Une souris %s %s de %d moi%s et pesant %d grammes",
-                couleur, clone, age, pluriel, poids);
+        return String.format("Une souris %s %s de %d moi et pesant %d grammes",
+                couleur, clone, age, poids);
     }
 
     public void vieillir() {

@@ -6,8 +6,8 @@ public class Main {
         var bamos  =new Magicien("Bamos", 500, "Baguette Zozor");
         var mamadou = new Sorcier("Mamadou", 500, "BaguetteDou", "BatonZor");
 
-        System.out.println(chris);
-        System.out.println(bamos);
-        System.out.println(mamadou);
+        chris.rencontrer();
+        bamos.rencontrer();
+        mamadou.rencontrer();
     }
 }

@@ -11,12 +11,6 @@ public class MainSouris {
         input.nextLine();
         System.out.print("Rentrer la couleur de la souris: ");
         String couleurSourisBlanche = input.nextLine();
-        /*System.out.println("la souris a-t'elle un age (y/n) ?");
-        String responseForAge = input.nextLine();
-        if (responseForAge == "y") {
-            System.out.print("Age de la souris: ");
-            int ageSourisBlanche = input.nextInt();
-        }*/
         System.out.print("Age de la souris: ");
         int ageSourisBlanche = input.nextInt();
 

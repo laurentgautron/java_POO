@@ -20,14 +20,6 @@ public class Souris {
 
     }
 
-    // constructeur sans age
-    /*public Souris(int poids, String couleur) {
-        this.poids = poids;
-        this.couleur = couleur;
-        System.out.println("Une nouvelle souris");
-
-    }*/
-
     // constructeur copie
     public Souris (Souris souris) {
         this.poids = souris.poids;

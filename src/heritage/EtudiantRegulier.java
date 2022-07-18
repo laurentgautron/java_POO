@@ -1,9 +1,9 @@
 package heritage;
 
 public class EtudiantRegulier extends Etudiant {
-    private double moyenne;
+    private float moyenne;
 
-    public EtudiantRegulier(String nom, String annee, String section, double moyenne) {
+    public EtudiantRegulier(String nom, String annee, String section, float moyenne) {
         super(nom, annee, section);
         this.moyenne = moyenne;
     }

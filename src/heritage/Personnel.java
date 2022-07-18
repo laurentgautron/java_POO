@@ -1,6 +1,6 @@
 package heritage;
 
-public class Personnel {
+public abstract class Personnel {
     private String nom;
     private String annee;
     private static int compteur = 0;
@@ -31,7 +31,7 @@ public class Personnel {
         return String.format("Nom: %s\nAnnée: %s\n", nom, annee);
     }
 
-    public int getCompteur() {
+    public int getCompteurPersonnes() {
         return compteur;
     }
 

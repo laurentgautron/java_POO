@@ -10,13 +10,13 @@ public class MainPersonnel {
                 "Chris Lisangola",
                 "2013",
                 "Physique",
-                15);
+                15F);
 
         EtudiantRegulier etudiantRegulier2 = new EtudiantRegulier(
                 "JIhane Cheddadi",
                 "2011",
                 "Math Informatique",
-                19.4);
+                19.4F);
 
         EtudiantEchange etudiantEchange = new EtudiantEchange(
                 "Bjorn cote de fer",
@@ -39,19 +39,19 @@ public class MainPersonnel {
                 5000
         );
 
-        System.out.println("Nombre de personnes (avec compteur: " + etudiantEchange.getCompteur());
+        System.out.println("Nombre de personnes (avec compteur): " + etudiantEchange.getCompteurPersonnes());
         System.out.println();
-        System.out.println(etudiantRegulier1 + (etudiantRegulier1.estEtudiant() ? "C'est un étudiant": "Ce n'est pas un étudiant"));
+        System.out.println(etudiantRegulier1 + etudiantSentence(etudiantRegulier1));
         System.out.println();
-        System.out.println(etudiantRegulier2 + (etudiantRegulier2.estEtudiant() ? "C'est un étudiant": "Ce n'est pas un étudiant"));
+        System.out.println(etudiantRegulier2 + etudiantSentence(etudiantRegulier2));
         System.out.println();
-        System.out.println(etudiantEchange + (etudiantEchange.estEtudiant() ? "C'est un étudiant": "Ce n'est pas un étudiant"));
+        System.out.println(etudiantEchange + etudiantSentence(etudiantEchange));
         System.out.println();
-        System.out.println(enseignant + (enseignant.estEtudiant() ? "C'est un étudiant": "Ce n'est pas un étudiant"));
+        System.out.println(enseignant + etudiantSentence(enseignant));
         System.out.println();
-        System.out.println(secretaire + (secretaire.estEtudiant() ? "C'est un étudiant": "Ce n'est pas un étudiant"));
+        System.out.println(secretaire + etudiantSentence(secretaire));
 
-        /*ArrayList<Personnel> personnes = new ArrayList<>();
+        ArrayList<Personnel> personnes = new ArrayList<>();
         personnes.add(etudiantRegulier1);
         personnes.add(etudiantRegulier2);
         personnes.add(etudiantEchange);
@@ -60,32 +60,47 @@ public class MainPersonnel {
 
         ArrayList<Personnel> etudiantsListe = new ArrayList<>();
 
-        int compteurEtudiants;
-
         for (Personnel personne : personnes) {
             if (personne.estEtudiant()) {
                 etudiantsListe.add(personne);
             }
         }
 
+        System.out.println("nombre étudiant ( taille de tableau): " + etudiantsListe.size());
+
         System.out.println();
-        System.out.println("Liste des étudiants: ");
+        System.out.println("################################");
+        System.out.println("#### Liste des étudiants ######");
+        System.out.println("################################");
         for (Personnel etudiant : etudiantsListe) {
             System.out.println(etudiant);
         }
 
-
-
-        // long nbEtudiants = personnes.stream().filter(personne->personne.getCategorie().equals("étudiant")).count();
-
         List<Personnel> etudiants = personnes.stream().filter(Personnel::estEtudiant).toList();
         System.out.println();
-        System.out.println("Les étudiants avec stream: ");
+        System.out.println("##########################################");
+        System.out.println("###### Les étudiants avec stream ########");
+        System.out.println("##########################################");
+
         for(Personnel etudiant : etudiants) {
             System.out.println(etudiant);
-        }*/
+        }
 
+        int nbEtudiants = 0;
+        for (Personnel personne: personnes) {
+            if (personne.estEtudiant()) {
+                nbEtudiants = ((Etudiant) personne).getCompteurEtudiant();
+                break;
+            }
+        }
 
-        //System.out.println("Nombre d'étudiants: " + nbEtudiants);
+        System.out.println("nombre étudiants avec compteur: " + nbEtudiants);
+
+        int nbPersonnes = personnes.size();
+        System.out.println("Nombre de personnes (taille tableau): " + nbPersonnes);
+    }
+
+    public static String etudiantSentence(Personnel personne) {
+        return personne.estEtudiant() ? "c'est un étudiant" : "Ce n'es pas un étudiant";
     }
 }

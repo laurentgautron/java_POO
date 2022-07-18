@@ -1,6 +1,6 @@
 package heritage;
 
-public class Etudiant extends Personnel {
+public abstract class Etudiant extends Personnel {
     private String section;
 
     private static int compteurEtudiant = 0;
@@ -19,7 +19,7 @@ public class Etudiant extends Personnel {
         this.section = section;
     }
 
-    public static int getCompteurEtudiant() {
+    public int getCompteurEtudiant() {
         return compteurEtudiant;
     }
 

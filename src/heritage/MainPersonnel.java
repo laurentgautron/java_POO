@@ -1,6 +1,7 @@
 package heritage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainPersonnel {
@@ -66,7 +67,15 @@ public class MainPersonnel {
             }
         }
 
+        int compteurEtudiant = 0;
+        for (Personnel personne : personnes) {
+            if (personne.estEtudiant()) {
+                compteurEtudiant++;
+            }
+        }
+
         System.out.println("nombre étudiant ( taille de tableau): " + etudiantsListe.size());
+        System.out.println("nombre etudiant ( comptage tableau personnes): " + compteurEtudiant);
 
         System.out.println();
         System.out.println("################################");

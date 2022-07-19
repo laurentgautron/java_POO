@@ -8,6 +8,7 @@ public class Main {
 
         var action = new Actions();
         // superman implémente l'interface voler donc peut être passer en paramètre
+        // la methode presenterUnPersonnageVolant ne va pas changer grâce à l'implémentation
         action.presenterUnPersonnageVolant(superman);
     }
 }

@@ -8,10 +8,12 @@ public class TP1 {
        int[] tableauEntiers = {12, 3, 5, 6, -3};
 
        int[] resultats = rechercheMinMax(tableauEntiers);
+       int max = resultats[0];
+       int min = resultats[1];
 
         System.out.println(displayResults(tableauEntiers, resultats));
 
-       System.out.printf("résultat: plus grand = %d\nPlus petit = %d", tableauEntiers[resultats[0]], tableauEntiers[resultats[1]]);
+       System.out.printf("résultat: plus grand = %d\nPlus petit = %d", max, min);
     }
     static int[] rechercheMinMax(int[] tableau) {
 
